@@ -1,0 +1,45 @@
+name: bookbroo
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/splash_screen/book-photo.png
+    - assets/images/welcome_screen_photos/welcome_screen_pic.png
+    - assets/logo/google_logo.png
+    - assets/images/splash_screen/BackGroundimage.png
+    - assets/images/splash_screen/book-bro_name.png
+    - assets/images/splash_screen/bookpages.png
+  fonts:
+    - family: SuperOcean
+      fonts:
+        - asset: assets/fonts/Super Ocean.ttf
+
+    - family: JAi
+      fonts:
+        - asset: assets/fonts/JAi.ttf
+
+    - family: GellatioRegular
+      fonts:
+        - asset: assets/fonts/Gellatio Regular.ttf
+
+    - family: Teko
+      fonts:
+        - asset: assets/fonts/Teko.ttf
