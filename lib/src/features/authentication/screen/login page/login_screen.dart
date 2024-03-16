@@ -1,6 +1,7 @@
 import 'package:bookbroo/src/constants/images_strings.dart';
 import 'package:bookbroo/src/constants/size.dart';
 import 'package:bookbroo/src/constants/text_string.dart';
+import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -102,7 +103,14 @@ class LoginScreen extends StatelessWidget {
                                 color: Colors.black,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
+                            },
                             child: Text(
                               vLogin.toUpperCase(),
                               style: const TextStyle(

@@ -1,4 +1,5 @@
 import 'package:bookbroo/src/constants/size.dart';
+import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/home_screen.dart';
 import 'package:bookbroo/src/features/authentication/screen/login%20page/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +116,14 @@ class SignUpScreen extends StatelessWidget {
                                 color: Colors.black,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
+                            },
                             child: Text(
                               vSignup.toUpperCase(),
                               style: const TextStyle(
