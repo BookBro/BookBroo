@@ -27,6 +27,16 @@ flutter:
     - assets/images/splash_screen/BackGroundimage.png
     - assets/images/splash_screen/book-bro_name.png
     - assets/images/splash_screen/bookpages.png
+    - assets/images/HomeScreenImages/photo1.jpg
+    - assets/images/HomeScreenImages/photo2.jpg
+    - assets/images/HomeScreenImages/photo3.jpg
+    - assets/images/HomeScreenImages/photo4.jpg
+    - assets/images/HomeScreenImages/photo5.jpg
+    - assets/images/HomeScreenImages/photo6.jpg
+    - assets/images/HomeScreenImages/photo7.jpg
+    - assets/images/HomeScreenImages/photo8.jpg
+    - assets/images/HomeScreenImages/photo9.jpg
+    - assets/images/HomeScreenImages/photo10.jpg
   fonts:
     - family: SuperOcean
       fonts:
@@ -43,3 +53,7 @@ flutter:
     - family: Teko
       fonts:
         - asset: assets/fonts/Teko.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins.ttf
