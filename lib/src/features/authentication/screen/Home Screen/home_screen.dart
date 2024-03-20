@@ -1,5 +1,6 @@
 import 'package:bookbroo/src/constants/images_strings.dart';
 import 'package:bookbroo/src/constants/size.dart';
+import 'package:bookbroo/src/features/authentication/screen/DiscoverPage/discoverpage.dart';
 import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/BookCard.dart';
 import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/HomeAppBar.dart';
 import 'package:flutter/cupertino.dart';
@@ -163,23 +164,46 @@ class HomeScreen extends StatelessWidget {
             backgroundColor: Color(0xffd3c5ad),
             items: [
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                  color: Colors.black,
+                icon: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    Icons.home,
+                    color: Colors.black,
+                  ),
                 ),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.explore,
-                  color: Colors.black,
+                icon: InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DiscoverPage(),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    Icons.explore,
+                    color: Colors.black,
+                  ),
                 ),
                 label: 'Discover',
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person,
-                  color: Colors.black,
+                icon: InkWell(
+                  onTap: () {},
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.black,
+                  ),
                 ),
                 label: 'Profile',
               ),

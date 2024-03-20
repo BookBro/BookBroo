@@ -38,12 +38,6 @@ var bookData = [
     coverUrl: "assets/images/HomeScreenImages/photo6.jpg",
   ),
   BookModel(
-    id: "7",
-    title: "Rich Dad Poor Dad",
-    author: "Robert T. Kiyosaki",
-    coverUrl: "assets/images/HomeScreenImages/photo7.jpg",
-  ),
-  BookModel(
     id: "8",
     title: "Psychology Of Money",
     author: "Morgan Housel",

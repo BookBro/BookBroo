@@ -7,6 +7,9 @@ const String vBackGroundImage =
 const String vBookNameImage = ("assets/images/splash_screen/book-bro_name.png");
 const String vbookpages = ("assets/images/splash_screen/bookpages.png");
 
+//--- Back Button ---
+const String vBackButton = ("assets/images/BackButton/backbutton.png");
+
 //--- Welcome Screeen Images ---
 
 const String vWelcomeScreenImage =
