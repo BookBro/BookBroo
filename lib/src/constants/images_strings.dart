@@ -30,3 +30,5 @@ const String vHSIPhoto7 = "assets/images/HomeScreenImages/photo7.jpg";
 const String vHSIPhoto8 = "assets/images/HomeScreenImages/photo8.jpg";
 const String vHSIPhoto9 = "assets/images/HomeScreenImages/photo9.jpg";
 const String vHSIPhoto10 = "assets/images/HomeScreenImages/photo10.jpg";
+//--- Discover Screen Images ---
+const String vDSIPhoto = "assets/images/DiscoverScreen/star.png";

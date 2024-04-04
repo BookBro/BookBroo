@@ -1,3 +1,4 @@
+import 'package:bookbroo/src/features/authentication/screen/welcome/welcome_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +7,24 @@ class HomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Icon(Icons.settings),
+        InkWell(
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Welcome(),
+              ),
+            );
+          },
+          child: Image.asset(
+            "assets/images/BackButton/backbutton.png",
+            height: 40,
+          ),
+        ),
         Text(
           "Home",
           style: TextStyle(

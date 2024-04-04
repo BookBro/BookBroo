@@ -8,8 +8,9 @@ class HomeSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Theme.of(context).colorScheme.background),
+        borderRadius: BorderRadius.circular(10),
+        color: Theme.of(context).colorScheme.background,
+      ),
       child: Row(
         children: [
           SizedBox(

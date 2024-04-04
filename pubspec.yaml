@@ -38,6 +38,7 @@ flutter:
     - assets/images/HomeScreenImages/photo9.jpg
     - assets/images/HomeScreenImages/photo10.jpg
     - assets/images/BackButton/backbutton.png
+    - assets/images/DiscoverScreen/star.png
   fonts:
     - family: SuperOcean
       fonts:
