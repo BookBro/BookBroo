@@ -166,7 +166,7 @@ class HomeScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => HomeScreen(),
@@ -183,7 +183,7 @@ class HomeScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: InkWell(
                   onTap: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => DiscoverPage(),
