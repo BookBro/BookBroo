@@ -1,24 +1,31 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../constants/images_strings.dart';
+import '../BookDetails/BookDetails.dart'; // Adjust the import based on the actual location of BookDetails.dart
 
 class BookCard extends StatelessWidget {
   final String coverUrl;
   final String title;
   final String author;
-  const BookCard(
-      {super.key,
-      required this.coverUrl,
-      required this.title,
-      required this.author});
+  final VoidCallback? onTap;
+  const BookCard({
+    super.key,
+    required this.coverUrl,
+    required this.title,
+    required this.author,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 20),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Get.to(BookDetails(book: e));
+        },
         child: SizedBox(
           width: 120,
           child: Column(

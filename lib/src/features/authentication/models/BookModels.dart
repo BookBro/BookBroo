@@ -14,6 +14,8 @@ class BookModel {
   String? coverUrl;
   int? price;
   String? numberofRating;
+  String? reviews;
+  String? personReview;
 
   BookModel(
       {this.id,
@@ -30,7 +32,9 @@ class BookModel {
       this.category,
       this.price,
       this.coverUrl,
-      this.numberofRating});
+      this.numberofRating,
+      this.reviews,
+      this.personReview});
 
   BookModel.fromJson(Map<String, dynamic> json) {
     if (json["id"] is String) {
@@ -78,6 +82,12 @@ class BookModel {
     if (json["numberofRating"] is int) {
       numberofRating = json["numberofRating"];
     }
+    if (json["reviews"] is String) {
+      reviews = json["reviews"];
+    }
+    if (json["personReview"] is String) {
+      personReview = json["personReview"];
+    }
   }
 
   Map<String, dynamic> toJson() {
@@ -97,6 +107,8 @@ class BookModel {
     _data["coverUrl"] = coverUrl;
     _data["price"] = price;
     _data["numberofRating"] = numberofRating;
+    _data["reviews"] = reviews;
+    _data["personReview"] = personReview;
     return _data;
   }
 }

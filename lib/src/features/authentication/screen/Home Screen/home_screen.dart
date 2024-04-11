@@ -1,10 +1,13 @@
 import 'package:bookbroo/src/constants/images_strings.dart';
 import 'package:bookbroo/src/constants/size.dart';
+import 'package:bookbroo/src/features/authentication/screen/BookDetails/BookDetails.dart';
 import 'package:bookbroo/src/features/authentication/screen/DiscoverPage/discoverpage.dart';
 import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/BookCard.dart';
 import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/HomeAppBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../utils/LineBarforCategoryBar.dart';
 import '../../models/Data.dart';
@@ -62,6 +65,9 @@ class HomeScreen extends StatelessWidget {
                                   title: e.title!,
                                   author: e.author!,
                                   coverUrl: e.coverUrl!,
+                                  onTap: () {
+                                    Get.to(BookDetails(book: e));
+                                  },
                                 ),
                               )
                               .toList(),
@@ -96,6 +102,9 @@ class HomeScreen extends StatelessWidget {
                                         title: e.title!,
                                         author: e.author!,
                                         coverUrl: e.coverUrl!,
+                                        onTap: () {
+                                          Get.to(BookDetails(book: e));
+                                        },
                                       ),
                                     )
                                     .toList(),
@@ -133,6 +142,9 @@ class HomeScreen extends StatelessWidget {
                                         title: e.title!,
                                         author: e.author!,
                                         coverUrl: e.coverUrl!,
+                                        onTap: () {
+                                          Get.to(BookDetails(book: e));
+                                        },
                                       ),
                                     )
                                     .toList(),
@@ -166,12 +178,7 @@ class HomeScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
-                      ),
-                    );
+                    Get.to(HomeScreen());
                   },
                   child: Icon(
                     Icons.home,
@@ -183,12 +190,7 @@ class HomeScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DiscoverPage(),
-                      ),
-                    );
+                    Get.to(DiscoverPage());
                   },
                   child: Icon(
                     Icons.explore,
