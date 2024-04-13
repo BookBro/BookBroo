@@ -11,19 +11,26 @@ class BookTil extends StatelessWidget {
   final String title;
   final String author;
   final String rating;
-  const BookTil(
-      {super.key,
-      required this.coverUrl,
-      required this.title,
-      required this.author,
-      required this.rating});
+  final String reviews;
+  final String personReview;
+  final VoidCallback? onTap;
+  const BookTil({
+    super.key,
+    required this.coverUrl,
+    required this.title,
+    required this.author,
+    required this.rating,
+    required this.reviews,
+    required this.personReview,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
             borderRadius:
@@ -75,14 +82,21 @@ class BookTil extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
+                        letterSpacing: 1.5,
                       ),
                     ),
                     SizedBox(
-                      height: 5,
+                      height: 15,
                     ),
-                    Text(author),
+                    Text(
+                      author,
+                      style: TextStyle(
+                        fontSize: 15,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     Row(
                       children: [
@@ -96,15 +110,6 @@ class BookTil extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Row(
-                      children: [
-                        Icon(Icons.shopping_cart),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Icon(Icons.heart_broken)
-                      ],
-                    )
                   ],
                 ),
               )

@@ -41,12 +41,13 @@ class BookDetails extends StatelessWidget {
                       SizedBox(
                         height: 8,
                       ),
+
+                      //--- personreview ----
                       Row(
                         children: [
                           Flexible(
                             child: ReadMoreText(
-                              text:
-                                  "Ashneer Grover is the poster boy of the emerging start-up culture, the most talked about judge from Shark Tank India and one of the most controversial entrepreneurs. Wow, that’s sensational, isn’t it? Talking about sensationalism, there are some stories that are so thought-provoking that nothing more is needed to cause a stir. I still remember in a few episodes of Shark Tank India (Season 1), Ashneer had given a reference of his young co-founder that he wouldn’t dare do such silly business mistakes. I wish he knew the real faces of people around him and didn’t have such blind confidence in them. This costed him to be subject to doglapan of the highest order. Anyways, what has been done, has been done. Here we are with, Doglapan by Ashneer Grover, an auto-biography of Bharat Pe co-founder. in hand.",
+                              text: book.personReview!,
                             ),
                           ),
                         ],

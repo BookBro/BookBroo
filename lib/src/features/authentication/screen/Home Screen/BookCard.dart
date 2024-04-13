@@ -1,20 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import '../../../../constants/images_strings.dart';
-import '../BookDetails/BookDetails.dart'; // Adjust the import based on the actual location of BookDetails.dart
 
 class BookCard extends StatelessWidget {
   final String coverUrl;
   final String title;
   final String author;
+  final String rating;
+  final String reviews;
+  final String personReview;
   final VoidCallback? onTap;
+
   const BookCard({
-    super.key,
     required this.coverUrl,
     required this.title,
     required this.author,
+    required this.rating,
+    required this.reviews,
+    required this.personReview,
     this.onTap,
   });
 
@@ -23,9 +25,7 @@ class BookCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 20),
       child: InkWell(
-        onTap: () {
-          Get.to(BookDetails(book: e));
-        },
+        onTap: onTap,
         child: SizedBox(
           width: 120,
           child: Column(
@@ -50,14 +50,15 @@ class BookCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               Text(
                 title,
                 textAlign: TextAlign.center,
                 maxLines: 1,
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Text(
                 author,

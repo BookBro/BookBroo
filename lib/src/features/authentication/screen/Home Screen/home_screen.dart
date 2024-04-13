@@ -1,17 +1,13 @@
-import 'package:bookbroo/src/constants/images_strings.dart';
-import 'package:bookbroo/src/constants/size.dart';
-import 'package:bookbroo/src/features/authentication/screen/BookDetails/BookDetails.dart';
-import 'package:bookbroo/src/features/authentication/screen/DiscoverPage/discoverpage.dart';
-import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/BookCard.dart';
-import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/HomeAppBar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../utils/LineBarforCategoryBar.dart';
 import '../../models/Data.dart';
+import '../BookDetails/BookDetails.dart';
+import '../DiscoverPage/discoverpage.dart';
+import 'BookCard.dart';
 import 'CategoryBar.dart';
+import 'HomeAppBar.dart';
 import 'SearchBar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +15,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (bookData.isEmpty) {
+      // Handle the case where bookData is empty
+      return Container(); // Or display a message indicating no books are available
+    }
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -60,13 +61,25 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: bookData
+                              .where(
+                                (book) =>
+                                    book.title != null &&
+                                    book.author != null &&
+                                    book.coverUrl != null &&
+                                    book.reviews != null &&
+                                    book.rating != null &&
+                                    book.personReview != null,
+                              )
                               .map(
-                                (e) => BookCard(
-                                  title: e.title!,
-                                  author: e.author!,
-                                  coverUrl: e.coverUrl!,
+                                (book) => BookCard(
+                                  title: book.title!,
+                                  author: book.author!,
+                                  coverUrl: book.coverUrl!,
+                                  reviews: book.reviews!,
+                                  rating: book.rating!,
+                                  personReview: book.personReview!,
                                   onTap: () {
-                                    Get.to(BookDetails(book: e));
+                                    Get.to(BookDetails(book: book));
                                   },
                                 ),
                               )
@@ -97,13 +110,25 @@ class HomeScreen extends StatelessWidget {
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 children: bookData
+                                    .where(
+                                      (book) =>
+                                          book.title != null &&
+                                          book.author != null &&
+                                          book.coverUrl != null &&
+                                          book.reviews != null &&
+                                          book.rating != null &&
+                                          book.personReview != null,
+                                    )
                                     .map(
-                                      (e) => BookCard(
-                                        title: e.title!,
-                                        author: e.author!,
-                                        coverUrl: e.coverUrl!,
+                                      (book) => BookCard(
+                                        title: book.title!,
+                                        author: book.author!,
+                                        coverUrl: book.coverUrl!,
+                                        reviews: book.reviews!,
+                                        rating: book.rating!,
+                                        personReview: book.personReview!,
                                         onTap: () {
-                                          Get.to(BookDetails(book: e));
+                                          Get.to(BookDetails(book: book));
                                         },
                                       ),
                                     )
@@ -121,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                             Row(
                               children: [
                                 Text(
-                                  "Most Viwed",
+                                  "Most Viewed",
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontFamily: 'Poppins',
@@ -137,13 +162,25 @@ class HomeScreen extends StatelessWidget {
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 children: bookData
+                                    .where(
+                                      (book) =>
+                                          book.title != null &&
+                                          book.author != null &&
+                                          book.coverUrl != null &&
+                                          book.reviews != null &&
+                                          book.rating != null &&
+                                          book.personReview != null,
+                                    )
                                     .map(
-                                      (e) => BookCard(
-                                        title: e.title!,
-                                        author: e.author!,
-                                        coverUrl: e.coverUrl!,
+                                      (book) => BookCard(
+                                        title: book.title!,
+                                        author: book.author!,
+                                        coverUrl: book.coverUrl!,
+                                        reviews: book.reviews!,
+                                        rating: book.rating!,
+                                        personReview: book.personReview!,
                                         onTap: () {
-                                          Get.to(BookDetails(book: e));
+                                          Get.to(BookDetails(book: book));
                                         },
                                       ),
                                     )

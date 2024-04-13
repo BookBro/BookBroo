@@ -4,8 +4,11 @@ import 'package:bookbroo/src/features/authentication/models/Data.dart';
 import 'package:bookbroo/src/features/authentication/screen/Home%20Screen/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../../../../constants/images_strings.dart';
+import '../BookDetails/BookDetails.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({Key? key});
@@ -69,6 +72,11 @@ class DiscoverPage extends StatelessWidget {
                           title: e.title!,
                           author: e.author!,
                           rating: e.rating!,
+                          reviews: e.reviews!,
+                          personReview: e.personReview!,
+                          onTap: () {
+                            Get.to(BookDetails(book: e));
+                          },
                         ),
                       )
                       .toList(),
